@@ -78,6 +78,7 @@ int main() {
 
         for (int i = 0; i < strlen(slovo); i++)
             blink(slovo[i]);
+        // WORD SEPARATOR DELAY
         wait(SEPARATOR*2);
 
         //myled = 1; // LED is ON
