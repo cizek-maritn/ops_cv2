@@ -1,3 +1,9 @@
-main.cpp a main.h jsou zdrojove kody k uloze s diodou
-LCD_main.cpp je zdrojovy kod k vypsani textu na displej
-Martin Cizek a Daniel Adamek
+1. úloha:
+  blikání LED diody morseovy abecedy dle zadaného textového řetězce. 
+  - hlavičkový soubor main.h
+  - zdrojový kód v souboru main.cpp
+2. úloha
+  zobrazení jmen na LCD display
+  - zdrojový kód v souboru LCD_main.cpp
+Tvůrci:
+  Martin Cizek a Daniel Adámek
