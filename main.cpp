@@ -1,24 +1,39 @@
+/* mbed Microcontroller Library
+ * Copyright (c) 2019 ARM Limited
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 #include "mbed.h"
 #include "main.h"
 #include <cstring>
 
+// Global variable of the LED
+DigitalOut led(LED1);
 
-DigitalOut myled(LED1);
+/*
+    @abstract turns on the LED for a long time 
+*/
 
 void lblink() {
-    myled = DIODA_ON;
-    wait(LONG);
-    myled = DIODA_OFF;
-    wait(SEPARATOR);
+    led = DIODA_ON;
+    ThisThread::sleep_for(LONG_BLINK_TIME);
+    led = DIODA_OFF;
+    ThisThread::sleep_for(LETTER_SEPARATOR_TIME);
 }
+/*
+    @abstract turns on the LED for a short time 
+*/
 void sblink() {
-    myled = DIODA_ON;
-    wait(SHORT);
-    myled = DIODA_OFF;
-    wait(SEPARATOR);
-
+    led = DIODA_ON;
+    ThisThread::sleep_for(SHORT_BLINK_TIME);
+    led = DIODA_OFF;
+    ThisThread::sleep_for(LETTER_SEPARATOR_TIME);
 }
 
+/*
+    @abstract Makes blink a letter LED with Morse alphabet
+    @param char letter - input letter
+*/
 void blink(char letter) {
     switch (letter) {
         case 'a':
@@ -72,18 +87,15 @@ void blink(char letter) {
     }
 }
 
-int main() { 
-    while(1) {
+int main() {
+    while (true) {
+        // Input string
         char* slovo = "sos";
 
+        // loop char by char and makes blink
         for (int i = 0; i < strlen(slovo); i++)
             blink(slovo[i]);
-        // WORD SEPARATOR DELAY
-        wait(SEPARATOR*2);
-
-        //myled = 1; // LED is ON
-        //wait(0.2); // 200 ms
-        //myled = 0; // LED is OFF
-        //wait(1.0); // 1 sec
+        // word separator
+        ThisThread::sleep_for(LETTER_SEPARATOR_TIME*2);
     }
 }
