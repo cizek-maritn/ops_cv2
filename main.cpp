@@ -6,15 +6,15 @@
 DigitalOut myled(LED1);
 
 void lblink() {
-    myled = 1;
+    myled = DIODA_ON;
     wait(LONG);
-    myled = 0;
+    myled = DIODA_OFF;
     wait(SEPARATOR);
 }
 void sblink() {
-    myled = 1;
+    myled = DIODA_ON;
     wait(SHORT);
-    myled = 0;
+    myled = DIODA_OFF;
     wait(SEPARATOR);
 
 }
