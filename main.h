@@ -1,6 +1,5 @@
-#define LONG .6
-#define SHORT .3
-#define SEPARATOR .2
+#define LONG_BLINK_TIME 600ms
+#define SHORT_BLINK_TIME 300ms
+#define LETTER_SEPARATOR_TIME 200ms
 #define DIODA_ON 1
 #define DIODA_OFF 0
-
