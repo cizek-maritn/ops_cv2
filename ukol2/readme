@@ -1,0 +1,8 @@
+1. Napište kód, který v med vytvoří tři nezávislá vlákna.
+2. Každé z nich píše na jiné místo displeje unikátní text (např. Já jsem 1, já jsem 2 apod.)
+3. Každé z nich text rozsvěcí a zhasíná s jinou periodou.
+4. K rozsvícení textu a zhasnutí užijte ThisThread::sleep_for.
+5. Parametry (doby svícení a texty, barva a umístění textu) jsou makra v nějakém hlavičkovém souboru.
+
+Vše napsáno v main.(cpp|h) i s dokumentací.
+Vypracovali: Martin Čížek & Daniel Adámek
