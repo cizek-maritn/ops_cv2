@@ -8,6 +8,8 @@
  * @param y line number
  * @param text displayed text
  * @param time sleep duration in milliseconds
+   @param color HEX color of letters
+   @param back_color HEX color of background
  */
 struct DispData {
     int x;
@@ -18,6 +20,7 @@ struct DispData {
     uint32_t back_color;
 };
 
+// Mutex lock
 Mutex mtx;
 
 /* Declaration of threads */
